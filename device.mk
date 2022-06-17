@@ -91,6 +91,7 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 PRODUCT_PACKAGES += \
     NotchBarKiller
+    BatteryHealthOverlay
 
 # Permissions
 PRODUCT_COPY_FILES += \
