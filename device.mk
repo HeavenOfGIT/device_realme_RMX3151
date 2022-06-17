@@ -130,6 +130,16 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
 
+# RcsService
+PRODUCT_PACKAGES += \
+    RcsService
+	
+# Radio
+PRODUCT_PACKAGES += \
+    android.hardware.radio@1.5.vendor \
+    android.hardware.radio.config@1.2.vendor \
+    android.hardware.radio.deprecated@1.0.vendor
+
 # Wi-Fi
 PRODUCT_PACKAGES += \
     TetheringConfigOverlay \
