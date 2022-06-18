@@ -119,6 +119,17 @@ PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 PRODUCT_AAPT_CONFIG := xxxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
 
+# Extras
+PRODUCT_PACKAGES += \
+    $(DEVICE_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_SYSTEM)/etc/public.libraries.txt \
+    $(DEVICE_PATH)/configs/public.libraries-trustonic.txt:$(TARGET_COPY_OUT_SYSTEM)/etc/public.libraries-trustonic.txt \
+    $(DEVICE_PATH)/configs/sys_gps_lbs_config.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sys_gps_lbs_config.xml # gps
+
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/gps_debug.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/gps_debug.conf \
+    $(DEVICE_PATH)/configs/gps_debug.conf:$(TARGET_COPY_OUT_SYSTEM)/system_ext/etc/gps_debug.conf \
+    $(DEVICE_PATH)/configs/gps_debug.conf:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_EXTRA_VNDK_VERSIONS)/etc/gps_debug.conf
+
 # Init
 PRODUCT_PACKAGES += \
     init.mt6781.rc \
